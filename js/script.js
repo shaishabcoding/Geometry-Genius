@@ -8,7 +8,7 @@ function calculateTriangleArea() {
 
   const area = 0.5 * triangleBase * triangleHeight;
 
-  triangleAreaSpan.innerHTML = area;
+  triangleAreaSpan.innerHTML = area.toFixed(2);
 }
 
 function calculateRectangleArea() {
@@ -21,7 +21,7 @@ function calculateRectangleArea() {
 
   const area = rectangleWidth * rectangleLength;
 
-  rectangleAreaSpan.innerHTML = area;
+  rectangleAreaSpan.innerHTML = area.toFixed(2);
 }
 
 function calculateParallelogramArea() {
@@ -36,7 +36,7 @@ function calculateParallelogramArea() {
 
   const area = parallelogramBase * parallelogramHeight;
 
-  parallelogramAreaSpan.innerHTML = area;
+  parallelogramAreaSpan.innerHTML = area.toFixed(2);
 }
 
 function calculateRhombusArea() {
@@ -46,7 +46,7 @@ function calculateRhombusArea() {
   const rhombusBase = parseFloat(rhombusBaseInput.value);
   const rhombusBase2 = parseFloat(rhombusBase2Input.value);
   const area = 0.5 * rhombusBase * rhombusBase2;
-  rhombusAreaSpan.innerHTML = area;
+  rhombusAreaSpan.innerHTML = area.toFixed(2);
 }
 
 function calculatePentagonArea() {
@@ -56,5 +56,15 @@ function calculatePentagonArea() {
   const pentagonBase = parseFloat(pentagonBaseInput.value);
   const pentagonPerimeter = parseFloat(pentagonPerimeterInput.value);
   const area = 0.5 * pentagonBase * pentagonPerimeter;
-  pentagonAreaSpan.innerHTML = area;
+  pentagonAreaSpan.innerHTML = area.toFixed(2);
+}
+
+function calculateEllipseArea() {
+  const ellipseBaseInput = document.getElementById("ellipse-base");
+  const ellipseAreaValueInput = document.getElementById("ellipse-area-value");
+  const ellipseAreaSpan = document.getElementById("ellipse-area");
+  const ellipseBase = parseFloat(ellipseBaseInput.value);
+  const ellipseAreaValue = parseFloat(ellipseAreaValueInput.value);
+  const area = Math.PI * ellipseBase * ellipseAreaValue;
+  ellipseAreaSpan.innerHTML = area.toFixed(2);
 }
