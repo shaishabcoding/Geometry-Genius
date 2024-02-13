@@ -12,14 +12,29 @@ function calculateTriangleArea() {
 }
 
 function calculateRectangleArea() {
-  const rectangleBaseInput = document.getElementById("rectangle-base");
-  const rectangleHeightInput = document.getElementById("rectangle-height");
+  const rectangleWidthInput = document.getElementById("rectangle-width");
+  const rectangleLengthInput = document.getElementById("rectangle-length");
   const rectangleAreaSpan = document.getElementById("rectangle-area");
 
-  const rectangleBase = parseFloat(rectangleBaseInput.value);
-  const rectangleHeight = parseFloat(rectangleHeightInput.value);
+  const rectangleWidth = parseFloat(rectangleWidthInput.value);
+  const rectangleLength = parseFloat(rectangleLengthInput.value);
 
-  const area = rectangleBase * rectangleHeight;
+  const area = rectangleWidth * rectangleLength;
 
   rectangleAreaSpan.innerHTML = area;
+}
+
+function calculateParallelogramArea() {
+  const parallelogramBaseInput = document.getElementById("parallelogram-base");
+  const parallelogramHeightInput = document.getElementById(
+    "parallelogram-height"
+  );
+  const parallelogramAreaSpan = document.getElementById("parallelogram-area");
+
+  const parallelogramBase = parseFloat(parallelogramBaseInput.value);
+  const parallelogramHeight = parseFloat(parallelogramHeightInput.value);
+
+  const area = parallelogramBase * parallelogramHeight;
+
+  parallelogramAreaSpan.innerHTML = area;
 }
