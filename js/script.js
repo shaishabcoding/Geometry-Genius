@@ -38,3 +38,13 @@ function calculateParallelogramArea() {
 
   parallelogramAreaSpan.innerHTML = area;
 }
+
+function calculateRhombusArea() {
+  const rhombusBaseInput = document.getElementById("rhombus-base");
+  const rhombusBase2Input = document.getElementById("rhombus-base2");
+  const rhombusAreaSpan = document.getElementById("rhombus-area");
+  const rhombusBase = parseFloat(rhombusBaseInput.value);
+  const rhombusBase2 = parseFloat(rhombusBase2Input.value);
+  const area = 0.5 * rhombusBase * rhombusBase2;
+  rhombusAreaSpan.innerHTML = area;
+}
