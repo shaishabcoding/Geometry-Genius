@@ -48,3 +48,13 @@ function calculateRhombusArea() {
   const area = 0.5 * rhombusBase * rhombusBase2;
   rhombusAreaSpan.innerHTML = area;
 }
+
+function calculatePentagonArea() {
+  const pentagonBaseInput = document.getElementById("pentagon-base");
+  const pentagonPerimeterInput = document.getElementById("pentagon-perimeter");
+  const pentagonAreaSpan = document.getElementById("pentagon-area");
+  const pentagonBase = parseFloat(pentagonBaseInput.value);
+  const pentagonPerimeter = parseFloat(pentagonPerimeterInput.value);
+  const area = 0.5 * pentagonBase * pentagonPerimeter;
+  pentagonAreaSpan.innerHTML = area;
+}
